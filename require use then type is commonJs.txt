@@ -1,0 +1,2 @@
+require use then type is commonJs
+but use module then use express normal
