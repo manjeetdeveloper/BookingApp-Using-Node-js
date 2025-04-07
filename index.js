@@ -45,15 +45,15 @@ app.post('/books', (req, res) => {
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://manjeet:manjeet@cluster0.uurzfnm.mongodb.net/booking')
-  .then(() => console.log("✅ Database connected successfully!"))
-  .catch((err) => console.log("❌ Database Error:", err))
+  .then(() => console.log("Database connected successfully!"))
+  .catch((err) => console.log(" Database Error:", err))
 
 
 
 const PORT = process.env.PORT || 8500
 app.listen(PORT, () => {
-  console.log(`✅ Backend server is running at http://localhost:${PORT}`)
-  console.log('🔍 You can test the connection by visiting:')
+  console.log(`Backend server is running at http://localhost:${PORT}`)
+  console.log('You can test the connection by visiting:')
   console.log(`  http://localhost:${PORT}`)
 }).on('error', (err) => {
   if (err.code === 'EADDRINUSE') {
