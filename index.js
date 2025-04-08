@@ -5,19 +5,19 @@ import authRoute from "./api/routes/auth.js"
 import userModel from "./api/routes/users.js"
 import hotelRoute from "./api/routes/hotels.js"
 import roomRoute from "./api/routes/rooms.js"
+import cookieParser from "cookie-parser"
 
 
 const app = express()
 
 // Middleware
 app.use(express.urlencoded({ extended: true }))
-
+app.use(cookieParser())
 
 app.use(express.json()) // ye purata data jo post kr rhe hai usko json format me convert karega
 
 // Routes/ middleware
 app.use("/api/users", userModel)
-// app.use("/api/auth", userModel)
 app.use("/api/auth", authRoute)
 app.use("/api/hotels", hotelRoute)
 app.use("/api/rooms", roomRoute)
