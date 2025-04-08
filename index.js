@@ -1,18 +1,19 @@
 import express from "express"
 import mongoose from "mongoose"
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import authRoute from "./api/routes/auth.js"
 import userModel from "./api/routes/users.js"
 import hotelRoute from "./api/routes/hotels.js"
 import roomRoute from "./api/routes/rooms.js"
-import cookieParser from "cookie-parser"
+import cookieParser from "cookie-parser";
 
 
 const app = express()
 
 // Middleware
+dotenv.config();
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }))
-app.use(cookieParser())
 
 app.use(express.json()) // ye purata data jo post kr rhe hai usko json format me convert karega
 

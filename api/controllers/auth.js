@@ -46,7 +46,7 @@ export const login = async (req, res, next) => {
 
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
-      "process.env.JWT"
+      process.env.JWT 
     );
 
     //  then this see the all Deatails :- Like Admin -true, passwprd-true aise he (otherDetails)
