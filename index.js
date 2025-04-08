@@ -17,7 +17,8 @@ app.use(express.json()) // ye purata data jo post kr rhe hai usko json format me
 
 // Routes/ middleware
 app.use("/api/users", userModel)
-app.use("/api/auth", userModel)
+// app.use("/api/auth", userModel)
+app.use("/api/auth", authRoute)
 app.use("/api/hotels", hotelRoute)
 app.use("/api/rooms", roomRoute)
 
