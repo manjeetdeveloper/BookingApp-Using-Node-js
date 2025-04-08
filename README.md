@@ -153,6 +153,9 @@ This project is licensed under the MIT License -
  ## THIRD Commit Upadet hotel :- 
 ## Thir![Screenshot 2025-03-31 130024](https://github.com/user-attachments/assets/d9d524a0-ef81-4582-87d3-ac9cf51c2b4b)
 
+##  From error Handling in Database :- 
+![Screenshot 2025-04-07 182418](https://github.com/user-attachments/assets/9083c8cb-b147-4e45-b7fa-9b176d47ea05)
+![Screenshot 2025-04-07 183353](https://github.com/user-attachments/assets/8b16500b-45d9-4cec-8577-abfa7dcd6b29)
 
 
 
