@@ -21,13 +21,18 @@ app.use("/api/auth", userModel)
 app.use("/api/hotels", hotelRoute)
 app.use("/api/rooms", roomRoute)
 
-// // Enable CORS
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   next();
-// });
+// Here write another middelware bcs "HOw to handle Errors In Express Server(res.status(500).json(err);)
+ app.use((err,req, res,next)=>{
+  const errorStatus = err.status || 500
+  const errorMessage = err.message || "Somting went wrong !"
+  return res.status(500).json({
+    success:false,
+    status:errorStatus,
+    message: errorMessage,
+    stack: err.stack,
+  });
+ });
+
 
 // Test route
 app.get('/', (req, res) => {
